@@ -6,15 +6,15 @@
     "choose": "Choose a sensor",
     "wrong_entity": "Choose a sensor",
     "waiting": "Waiting for Home Assistant",
-    "no_elements": "No part to show",
-    "tap_script": "Script on tap",
-    "tap_script_hint": "Home Assistant script entity ID (e.g. script.home_open_action)"
+    "no_elements": "No part to show"
   },
   "app": {
     "name": "Custom card",
     "summary": "A card of values, bars and words that a template sensor in Home Assistant describes.",
     "tile_name": "Custom card",
     "tile_example": "21.4 °C, 48 %, CO2 820 ppm",
-    "card_name": "Custom card, large"
+    "card_name": "Custom card, large",
+    "tap_script": "Script on tap",
+    "tap_script_hint": "Home Assistant script entity ID (e.g. script.home_open_action)"
   }
 }
