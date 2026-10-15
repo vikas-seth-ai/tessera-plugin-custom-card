@@ -9,6 +9,9 @@ maintainer: StofLE
 license: MIT
 stage: beta
 topics: [home]
+permissions:
+  home_assistant_actions:
+    - script.turn_on
 requires:
   esphome: 2026.6.2
 boards: any
