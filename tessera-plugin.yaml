@@ -2,7 +2,7 @@
 # The templates live in Home Assistant (a template sensor whose attribute `elements` lists the card's parts); the screen
 # draws them with its own fonts and colours. Every field is explained in docs/MANIFEST.md of tessera-plugins.
 id: custom_card
-version: 0.5.0
+version: 0.5.1
 api: "0.9"
 icon: gauge
 maintainer: StofLE
