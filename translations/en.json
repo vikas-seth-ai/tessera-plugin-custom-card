@@ -6,7 +6,9 @@
     "choose": "Choose a sensor",
     "wrong_entity": "Choose a sensor",
     "waiting": "Waiting for Home Assistant",
-    "no_elements": "No part to show"
+    "no_elements": "No part to show",
+    "tap_script": "Script on tap",
+    "tap_script_hint": "Home Assistant script entity ID (e.g. script.home_open_action)"
   },
   "app": {
     "name": "Custom card",
