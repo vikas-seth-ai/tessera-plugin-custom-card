@@ -599,18 +599,26 @@ class CardTile : public tessera::Tile {
   void create(const tessera::TileContext &c) override {
     entity_ = c.entity ? c.entity : "";
     tile_ = c.tile;
+    tap_script_ = c.options["tap_script"] | "";
     // A tile one row high and two columns or more puts its parts side by side, as the departures plugin turns into a
     // list on two columns.
     drawing_.create(c.parent, c.width, c.height, c.rows == 1 && c.columns >= 2, c.name ? c.name : "", true);
   }
   void on_state(JsonObjectConst data) override { drawing_.take(data); }
   void on_theme() override { drawing_.paint(); }
-  void on_tap() override { tessera::open_card(plugin_->plugin_id(), "detail", entity_, tile_); }
+  void on_tap() override {
+    if (!tap_script_.empty()) {
+      tessera::action("script.turn_on", tap_script_);
+    } else {
+      tessera::open_card(plugin_->plugin_id(), "detail", entity_, tile_);
+    }
+  }
 
  private:
   const tessera::Plugin *plugin_;
   Drawing drawing_;
   std::string entity_;
+  std::string tap_script_;
   int tile_ = -1;
 };
 
