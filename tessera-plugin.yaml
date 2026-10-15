@@ -28,6 +28,14 @@ tiles:
     domains: [sensor]
     # `elements` is the card; a sensor without it shows its own state and unit.
     attributes: [elements, unit_of_measurement]
+
+    options:
+      - id: tap_script
+        kind: text
+        label: tap_script
+        hint: tap_script_hint
+        default: ""
+    
     # The inspector offers the sensors that describe a card, not every sensor in the house (API 0.5).
     has_attributes: [elements]
     example: tile_example
